@@ -1,0 +1,2 @@
+# python-statistc
+Some scripts
