@@ -43,6 +43,7 @@ with open("2015.csv", "r") as f_diarias_2015:
     plotter.title("Media de Diarias pagas pela UFRN em 2015")
     plotter.ylabel("Valores em Reais")
     plotter.xlabel("Meses")
+    plotter.axis([1,12,0,100000])
     plotter.show()
     
 with open("2016.csv", "r") as f_diarias_2016:
@@ -74,4 +75,5 @@ with open("2016.csv", "r") as f_diarias_2016:
     plotter.title("Media de Diarias pagas pela UFRN em 2016")
     plotter.ylabel("Valores em Reais")
     plotter.xlabel("Meses")
+    plotter.axis([1,12,0,100000])
     plotter.show()
