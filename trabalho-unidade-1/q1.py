@@ -74,7 +74,7 @@ with open("2016.csv", 'r') as f_diarias_2016:
     print "Mediana das diarias: " + str('R${:,.2f}'.format(print_mediana(dinheiro_publico_2016)))
         
     for d in dinheiro_publico_2016:
-        desvio_padrao_2016 += (pow((float (d)-media_2016), 2))
+        desvio_padrao_2016 += (pow((float (d/100)-media_2016), 2))
     desvio_padrao_2016 = (desvio_padrao_2016 / len(dinheiro_publico_2016))
     desvio_padrao_2016 = math.sqrt(desvio_padrao_2016)
     print "Desvio Padrao: " + str(desvio_padrao_2016)
