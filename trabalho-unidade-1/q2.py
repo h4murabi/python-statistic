@@ -47,13 +47,13 @@ with open('2016.csv', 'r') as f_diarias_2016:
     dataByDiff.sort(key=takeDiff)
     
     print 'VARIAVEL: Valor das Diarias'
-    print('Valor Minimo: ' + str(dataByValue[0]['value'] / 100) + ' ( ' + dataByValue[0]['person'] + ' ) ')
-    print('Valor Maximo: ' + str(dataByValue[len(dataByValue) - 1]['value'] / 100) + ' ( ' + dataByValue[len(dataByValue) - 1]['person'] + ' ) ' )
+    print('Valor Minimo: R$' + str(dataByValue[0]['value'] / 100) + ' ( ' + dataByValue[0]['person'] + ' ) ')
+    print('Valor Maximo: R$' + str(dataByValue[len(dataByValue) - 1]['value'] / 100) + ' ( ' + dataByValue[len(dataByValue) - 1]['person'] + ' ) ' )
     print 'Amplitude: ', str((dataByValue[len(dataByValue) - 1]['value'] / 100) - (dataByValue[0]['value'] / 100))
 
     print ''
     
     print 'VARIAVEL: Quantidade de dias das diarias'
-    print('Valor Minimo: ' + str(dataByDiff[0]['diffDate']) + ' ( ' + dataByDiff[0]['person'] + ' ) ')
-    print('Valor Maximo: ' + str(dataByDiff[len(dataByDiff) - 1]['diffDate']) + ' ( ' + dataByDiff[len(dataByDiff) - 1]['person'] + ' ) ' )
+    print('Valor Minimo: ' + str(dataByDiff[0]['diffDate']) + ' dias ( ' + dataByDiff[0]['person'] + ' ) ')
+    print('Valor Maximo: ' + str(dataByDiff[len(dataByDiff) - 1]['diffDate']) + ' dias ( ' + dataByDiff[len(dataByDiff) - 1]['person'] + ' ) ' )
     print 'Amplitude: ', str((dataByDiff[len(dataByDiff) - 1]['diffDate']) - (dataByDiff[0]['diffDate']))
