@@ -43,7 +43,7 @@ with open("2015.csv", "r") as f_diarias_2015:
     plotter.title("Media de Diarias pagas pela UFRN em 2015")
     plotter.ylabel("Valores em Reais")
     plotter.xlabel("Meses")
-    plotter.axis([1,12,0,100000])
+    plotter.axis([1,12,0,1500])
     plotter.show()
     
 with open("2016.csv", "r") as f_diarias_2016:
@@ -57,7 +57,7 @@ with open("2016.csv", "r") as f_diarias_2016:
     for index, linha in enumerate(reader):
         if not ((linha[2]).startswith("R$")):
             if (linha[4].startswith("R$")):
-                valor_diaria = float (Decimal(sub(r'[^\d.]', '', string.replace(linha[4], '.', ''))))
+                valor_diaria = float (Decimal(sub(r'[^\d.]', '', string.replace(linha[4], '.', '')))/100)
                 diarias.append(valor_diaria)
                 if parse(linha[2], dayfirst=True):
                     data = parse(linha[2], dayfirst=True)
@@ -75,5 +75,5 @@ with open("2016.csv", "r") as f_diarias_2016:
     plotter.title("Media de Diarias pagas pela UFRN em 2016")
     plotter.ylabel("Valores em Reais")
     plotter.xlabel("Meses")
-    plotter.axis([1,12,0,100000])
+    plotter.axis([1,12,0,1500])
     plotter.show()
